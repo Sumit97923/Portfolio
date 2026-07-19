@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sumit Gupta — Frontend Developer</title>
+<meta name="description" content="Portfolio of Sumit Gupta, first-year engineering student at IERT Prayagraj and frontend developer building real-time web apps with WebSockets.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="bgCanvas" class="bg-canvas"></canvas>
+<div class="bg-glow"></div>
+<div class="noise-overlay"></div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand">
+      <span class="brand-dot"></span>
+      <span class="brand-text">Sumit<span class="brand-accent">.</span>Gupta</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about"><span class="nl-index">01</span>About</a>
+      <a href="#skills"><span class="nl-index">02</span>Skills</a>
+      <a href="#certifications"><span class="nl-index">03</span>Certifications</a>
+      <a href="#projects"><span class="nl-index">04</span>Projects</a>
+      <a href="#resume"><span class="nl-index">05</span>Resume</a>
+      <a href="#contact"><span class="nl-index">06</span>Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div class="hero-copy reveal">
+      <p class="eyebrow"><span class="ping"></span>available for internships &amp; freelance</p>
+      <h1 class="hero-title">Sumit Gupta</h1>
+      <p class="hero-role">Frontend Developer <span class="dot-sep">&middot;</span> 1st Year Engineering Student</p>
+      <p class="hero-desc">I build fast, real‑time interfaces with HTML, CSS, JavaScript &amp; Python — currently deep in WebSockets, shipping a live stranger‑chat app from scratch.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+      </div>
+      <div class="hero-meta">
+        <a href="https://github.com/Sumit97923" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/sumit-gupta-174359331/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal" style="transition-delay:.1s">
+      <div class="chat-window">
+        <div class="chat-titlebar">
+          <span class="tb-dot red"></span><span class="tb-dot yellow"></span><span class="tb-dot green"></span>
+          <span class="tb-url">smiley-x3xp.onrender.com</span>
+        </div>
+        <div class="chat-body" id="chatBody">
+          <!-- messages injected by script.js -->
+        </div>
+        <div class="chat-inputbar">
+          <span class="chat-caret">▌</span>
+          <span class="chat-input-label">type a message…</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-cue reveal" style="transition-delay:.2s"><span></span>scroll</div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="section-inner">
+    <p class="section-label reveal"><span class="nl-index">01</span>About</p>
+    <div class="about-grid">
+      <div class="about-photo-wrap reveal">
+        <div class="about-photo">
+          <img src="profile.jpg" alt="Sumit Gupta" onerror="this.parentElement.classList.add('img-missing')">
+          <span class="photo-fallback">SG</span>
+        </div>
+        <span class="photo-badge"><span class="ping"></span>1st Year</span>
+      </div>
+      <div class="about-text reveal" style="transition-delay:.05s">
+        <h2 class="section-title">A first-year student who'd rather ship code than wait for the syllabus.</h2>
+        <p>I'm Sumit, an engineering fresher at IERT Prayagraj. I taught myself HTML, CSS, JavaScript and Python outside of class, and I'm currently building <strong>Smiley</strong> — a real‑time, WebSocket‑powered stranger‑chat app, end to end on the frontend. I care about clean layouts, smooth interactions and interfaces that feel instant.</p>
+        <p>Still early in the journey — one semester in — but already comfortable turning a design idea into a responsive, working page.</p>
+      </div>
+      <div class="about-facts reveal" style="transition-delay:.1s">
+        <div class="fact-row"><span>College</span><strong>IERT, Prayagraj</strong></div>
+        <div class="fact-row"><span>Location</span><strong>Prayagraj, Uttar Pradesh</strong></div>
+        <div class="fact-row"><span>Year</span><strong>1st Year</strong></div>
+        <div class="fact-row"><span>CGPA</span><strong>7.435 <em>(Sem 1 + sem 2)</em></strong></div>
+        <div class="fact-row"><span>Class XII</span><strong>76.20%</strong></div>
+        <div class="fact-row"><span>Class X</span><strong>84.83%</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section section-alt" id="skills">
+  <div class="section-inner">
+    <p class="section-label reveal"><span class="nl-index">02</span>Skills</p>
+    <h2 class="section-title reveal">Tools I reach for.</h2>
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <span class="skill-mark">&lt;/&gt;</span>
+        <h3>HTML</h3>
+        <p>Semantic, accessible structure for every page I build.</p>
+      </div>
+      <div class="skill-card reveal" style="transition-delay:.05s">
+        <span class="skill-mark">{ }</span>
+        <h3>CSS</h3>
+        <p>Responsive layouts, animation and hover‑driven micro‑interactions.</p>
+      </div>
+      <div class="skill-card reveal" style="transition-delay:.1s">
+        <span class="skill-mark">JS</span>
+        <h3>JavaScript</h3>
+        <p>DOM logic, events, and client‑side interactivity.</p>
+      </div>
+      <div class="skill-card reveal" style="transition-delay:.15s">
+        <span class="skill-mark">⇄</span>
+        <h3>WebSockets</h3>
+        <p>Real‑time, two‑way connections — the backbone of Smiley.</p>
+      </div>
+      <div class="skill-card reveal" style="transition-delay:.2s">
+        <span class="skill-mark">py</span>
+        <h3>Python</h3>
+        <p>Scripting and lightweight backend logic.</p>
+      </div>
+      <div class="skill-card reveal" style="transition-delay:.25s">
+        <span class="skill-mark">git</span>
+        <h3>Git &amp; GitHub</h3>
+        <p>Version control and shipping projects in public.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="section" id="certifications">
+  <div class="section-inner">
+    <p class="section-label reveal"><span class="nl-index">03</span>Certifications</p>
+    <h2 class="section-title reveal">Learning beyond the classroom.</h2>
+    <div class="cert-grid">
+      <a href="certificate-jpmorgan.pdf" target="_blank" rel="noopener" class="cert-card reveal">
+        <div class="cert-top">
+          <span class="cert-org">JPMorgan Chase &amp; Co.</span>
+          <span class="cert-view">View ↗</span>
+        </div>
+        <h3>Software Engineering Job Simulation</h3>
+        <p>Project setup, Kafka integration, H2 integration &amp; REST API development — via Forage.</p>
+        <span class="cert-date">Issued January 2026</span>
+      </a>
+
+      <a href="certificate-tcsion.pdf" target="_blank" rel="noopener" class="cert-card reveal" style="transition-delay:.08s">
+        <div class="cert-top">
+          <span class="cert-org">TCS iON</span>
+          <span class="cert-view">View ↗</span>
+        </div>
+        <h3>Generative AI Essentials</h3>
+        <p>Completed under the "AI for All" program by MPIT–CoE in partnership with TCS Foundation.</p>
+        <span class="cert-date">Issued June 2026</span>
+      </a>
+
+      <div class="cert-card cert-pending reveal" style="transition-delay:.16s">
+        <div class="cert-top">
+          <span class="cert-org">Deloitte</span>
+          <span class="cert-view">Coming soon</span>
+        </div>
+        <h3>Data Analytics Job Simulation</h3>
+        <p>Data analysis &amp; forensic technology tasks — via Forage.</p>
+        <span class="cert-date">Issued May 2026</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section" id="projects">
+  <div class="section-inner">
+    <p class="section-label reveal"><span class="nl-index">04</span>Projects</p>
+    <h2 class="section-title reveal">What I've been building.</h2>
+
+    <div class="project-card reveal">
+      <div class="project-preview">
+        <div class="chat-titlebar small">
+          <span class="tb-dot red"></span><span class="tb-dot yellow"></span><span class="tb-dot green"></span>
+          <span class="tb-url">smiley-x3xp.onrender.com</span>
+        </div>
+        <div class="project-preview-body">
+          <div class="bubble bubble-in">Stranger connected.</div>
+          <div class="bubble bubble-out">hey 👋</div>
+          <div class="bubble bubble-in">hii, where are you from?</div>
+          <div class="bubble bubble-out">Prayagraj, India</div>
+        </div>
+      </div>
+      <div class="project-info">
+        <h3>Smiley — Real-Time Stranger Chat</h3>
+        <p>An Omegle‑style chat app that randomly pairs two users for a live, one‑on‑one conversation. Built the entire frontend and wired it up to a WebSocket server for instant, persistent‑connection messaging — no page refresh, no polling.</p>
+        <ul class="tag-list">
+          <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Python</li><li>WebSocket</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://smiley-x3xp.onrender.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Live Demo ↗</a>
+          <a href="https://github.com/Sumit97923" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">Source on GitHub ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESUME -->
+<section class="section section-alt" id="resume">
+  <div class="section-inner">
+    <p class="section-label reveal"><span class="nl-index">05</span>Resume</p>
+    <div class="resume-head reveal">
+      <h2 class="section-title">Education &amp; background.</h2>
+      <div class="resume-actions">
+        <a href="Sumit_Gupta_Resume.pdf" target="_blank" rel="noopener" class="btn btn-ghost">View Resume ↗</a>
+        <a href="Sumit_Gupta_Resume.pdf" download="Sumit_Gupta_Resume.pdf" class="btn btn-primary">Download ↓</a>
+      </div>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-year">Present</span>
+          <h3>B.Tech, 1st Year — IERT, Prayagraj</h3>
+          <p>CGPA: 7.435. Focused on core engineering fundamentals while building frontend projects on the side.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal" style="transition-delay:.1s">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-year">Class XII</span>
+          <h3>Higher Secondary</h3>
+          <p>Scored 76.20%.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal" style="transition-delay:.2s">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-year">Class X</span>
+          <h3>Secondary</h3>
+          <p>Scored 84.83%.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="section-inner">
+    <p class="section-label reveal"><span class="nl-index">06</span>Contact</p>
+    <div class="contact-grid">
+      <div class="contact-copy reveal">
+        <h2 class="section-title">Let's build something.</h2>
+        <p>Open to internships, freelance frontend work, and collaboration. Reach out — I reply fast.</p>
+        <div class="contact-list">
+          <a href="mailto:sumitg979230@gmail.com" class="contact-row">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">sumitg979230@gmail.com</span>
+          </a>
+          <a href="tel:+917348330616" class="contact-row">
+            <span class="contact-label">Phone</span>
+            <span class="contact-value">+91 73483 30616</span>
+          </a>
+          <div class="contact-row">
+            <span class="contact-label">Address</span>
+            <span class="contact-value">Prayagraj, Uttar Pradesh, India</span>
+          </div>
+          <a href="https://github.com/Sumit97923" target="_blank" rel="noopener" class="contact-row">
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">github.com/Sumit97923</span>
+          </a>
+          <a href="https://www.linkedin.com/in/sumit-gupta-174359331/" target="_blank" rel="noopener" class="contact-row">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">in/sumit-gupta-174359331</span>
+          </a>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" style="transition-delay:.1s" id="contactForm">
+        <label>Name
+          <input type="text" name="name" placeholder="Your name" required>
+        </label>
+        <label>Email
+          <input type="email" name="email" placeholder="you@example.com" required>
+        </label>
+        <label>Message
+          <textarea name="message" rows="4" placeholder="Say hello…" required></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <p class="form-note" id="formNote"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>Designed &amp; built by Sumit Gupta — HTML, CSS &amp; JavaScript.</p>
+  <a href="#top" class="back-top">Back to top ↑</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
